@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>ane</Title>
+			<Shortcut>ane</Shortcut>
+			<Description>Code snippet for ArgumentNullException</Description>
+			<Author>linjq</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>argName</ID>
+					<ToolTip>Argument name</ToolTip>
+					<Default>arg</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[if ($argName$ == null)
+	{
+		throw new ArgumentException(nameof($argName$));
+	}$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
