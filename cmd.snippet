@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>cmd</Title>
+			<Shortcut>cmd</Shortcut>
+			<Description>ViewModel 中 Command 属性的代码片段</Description>
+			<Author>林俊清</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>commandnameprefix</ID>
+					<ToolTip>命令名前半部分</ToolTip>
+					<Default>DoSomething</Default>
+				</Literal>
+				<Literal>
+					<ID>expressions</ID>
+					<ToolTip>语句</ToolTip>
+					<Default>MessageBox.Show("Hello");</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[private ICommand _$commandnameprefix$Command;
+	public ICommand $commandnameprefix$Command
+	{
+		get
+		{
+			if (_$commandnameprefix$Command == null)
+			{
+				_$commandnameprefix$Command = new RelayCommand(() =>
+				{
+					$expressions$
+				});
+			}
+			return _$commandnameprefix$Command;
+		}
+	}$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
