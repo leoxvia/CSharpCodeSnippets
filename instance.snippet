@@ -23,7 +23,7 @@
         <![CDATA[private static $classname$ _Instance;
 	public static $classname$ Instance
 	{
-		get { return _Instance == null ? (_Instance = new $classname$()) : _Instance; }
+		get { return _Instance ?? (_Instance = new $classname$()); }
 	}$end$]]>
 			</Code>
 		</Snippet>
