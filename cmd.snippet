@@ -28,14 +28,10 @@
 	{
 		get
 		{
-			if (_$commandnameprefix$Command == null)
+			return _$commandnameprefix$Command ?? (_$commandnameprefix$Command = new RelayCommand(() =>
 			{
-				_$commandnameprefix$Command = new RelayCommand(() =>
-				{
-					$expressions$
-				});
-			}
-			return _$commandnameprefix$Command;
+				$expressions$
+			}));
 		}
 	}$end$]]>
 			</Code>
